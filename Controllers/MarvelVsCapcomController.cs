@@ -15,12 +15,14 @@ namespace RapidApi_Marvel.Controllers
             _marvelVsCapcom = marvelVsCapcom;
         }
         [HttpGet]
+        [Route("get_Characters")]
         public async Task<ActionResult<IEnumerable<Character>>> getCharacters()
         {
             return Ok(await _marvelVsCapcom.getCharacters());
         }
 
         [HttpPost]
+        [Route("post_Show_Character")]
         public async Task<ActionResult<IEnumerable<Character>>> postShowCharacter(string name)
         {
             return Ok(await _marvelVsCapcom.postShowCharacter(name));

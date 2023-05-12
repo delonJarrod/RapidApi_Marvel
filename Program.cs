@@ -10,6 +10,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IMarvelVsCapcom, MarvelVsCapcom>();
+builder.Services.AddScoped<IMarvelQuotes, MarvelQuotes>();
 
 
 
